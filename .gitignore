@@ -3,3 +3,5 @@
 
 *.*~
 .lein-failures
+target/
+test/
