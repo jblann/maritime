@@ -11,5 +11,6 @@
   :repositories {}
   :dependencies [[org.clojure/clojure "1.4.0"]
                  [storm "0.8.2"]
+                 [com.hmsonline/storm-cassandra "0.3.0"]
                  [commons-collections/commons-collections "3.2.1"]
                  [org.clojure/data.xml "0.0.7"]])
