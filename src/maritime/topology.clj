@@ -27,7 +27,7 @@
         (emit-bolt! collector fact :anchor tuple))
       (ack! collector tuple))))
 
-(def cass-writer (CassandraBatchingBolt. "maritime" "rowid"))
+(def write-volpe-cass (CassandraBatchingBolt. "volpe" "rowid"))
 
 (defn mk-topology []
   (topology
@@ -36,7 +36,7 @@
                    parse-volpe
                    :p 3)
     "3" (bolt-spec {"2" :shuffle}
-                   cass-writer
+                   write-volpe-cass
                    :p 4)}))
 
 (defn run-local! []
